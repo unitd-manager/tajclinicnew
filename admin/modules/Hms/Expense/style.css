@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.m-hms_expense .cpSearch input[type="text"]{
+    max-width: 200px !important;
+    width: 100px !important;
+}
+
+.cpSearch .dateRange {
+    width: 400px !important;
+}
+
+.ym-columnar .ym-fbox-text label,
+.columnar .type-text label,
+.ym-columnar .ym-fbox-select label,
+.columnar .type-select label {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+}

@@ -1,0 +1,139 @@
+@media all
+{
+    #topnav .logoutWrap {
+        text-align: right;
+        width: 255px;
+    }
+
+    table.list .headerlistManHours {
+	    text-align: center;
+	    width: 70px;
+	}
+
+	.m-manPower_order .c50l{
+		width: 40%;
+	}
+
+	.m-manPower_order .c50r{
+		width: 60%;
+	}
+
+	/*.m-manPower_order.v-edit .yform.edit .type-text div.txt,
+	.m-manPower_order.v-edit .yform.edit .type-text div.txt,
+	.m-manPower_order.v-edit .yform.edit .type-select div.txt,
+	.m-manPower_order.v-edit .yform.edit .form-row-wrapper div.txt {
+	    margin-left: 24%;
+	    padding: 0 0.5em 0.5em 0;
+	}
+
+	.m-manPower_order.v-edit .ym-columnar div.ym-fbox-text input,
+	.m-manPower_order.v-edit .columnar div.type-text input,
+	.m-manPower_order.v-edit .ym-columnar div.ym-fbox-text textarea,
+	.m-manPower_order.v-edit .columnar div.type-text textarea {
+	    display: inline;
+	    margin-right: 7%;
+	    width: 67.8%;
+	    float:right;
+	}
+
+	.m-manPower_order.v-edit .ym-columnar div.ym-fbox-select select,
+	.m-manPower_order.v-edit .columnar div.type-select select {
+	    display: inline;
+	    margin-left: 3.7%;
+	    width: 69.8%;
+	}
+
+	.m-manPower_order.v-edit .ym-form fieldset,
+	.m-manPower_order.v-edit .yform fieldset {
+	    background: none repeat scroll 0 0 #fafafa;
+	    border: 1px solid #ddd;
+	    margin: 0 0 10px;
+	    overflow: hidden;
+	    padding: 1em;
+	    position: relative;
+	    width: 500px;
+	}*/
+
+	.dateFormatNotify{
+		color: #666666;
+	    font-weight: bold;
+	    padding-left: 110px;
+	}
+
+
+	.emp_tax_invoice_tr_td{
+		display: none;
+	}
+
+	.showemptaxrow a{
+		color: #000;
+		text-decoration: underline;
+	}
+
+	.showemptaxrow {
+		background-color: #85BBE7;
+		color: #000;
+	}
+
+	.formula_text{
+		font-style: italic;
+    	padding-left: 83px;
+    	color: #336699;
+	}
+
+	.formula_text_invoice{
+		font-style: italic;
+    	color: #336699;
+	}
+
+	.formula_text_italic{
+		font-style: italic;
+    	padding-left: 83px;
+    	color: #336699;
+    	padding-bottom: 2px;
+    	padding-top: 2px;
+	}
+
+	.employer_Formula{
+		padding-bottom: 2px;
+	}
+
+	.invoice_Date{
+		width: 14%;
+	}
+
+	.invoiceCodeth{
+		width: 12%;
+	}
+
+	.statusth{
+		width: 8%;
+	}
+
+	.monthth{
+		width: 11%;
+	}
+
+	.startdateth{
+		width: 14%;
+	}
+
+	.enddateth{
+		width: 14%;
+	}
+
+	.amountth{
+		width: 11%;
+	}
+
+	.detailth{
+		width: 11%;
+	}
+
+	.cancelth{
+		width: 11%;
+	}
+
+}
+
+

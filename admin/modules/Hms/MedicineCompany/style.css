@@ -1,0 +1,36 @@
+.m-hms_medicineCompany .toggle {
+    display:block;
+}
+
+.m-hms_medicineCompany .yform {
+    background-color: #fff;
+    border: 0;
+    padding: 0;
+}
+
+.m-hms_medicineCompany.v-edit .c50l,
+.m-hms_medicineCompany.v-edit .c50r {
+    width: 100%;
+}
+
+.m-hms_medicineCompany .ym-columnar .ym-fbox-text label,
+.m-hms_medicineCompany .ym-columnar .ym-fbox-select label,
+.m-hms_medicineCompany #frmEdit .type-text label,
+.m-hms_medicineCompany #frmEdit .type-radio label,
+.m-hms_medicineCompany #frmEdit .type-select label {
+    width: 100%;
+}
+
+.ym-columnar.ym-form .form-row-wrapper.row_published .leftCol, 
+.columnar.yform .form-row-wrapper.row_published .leftCol{
+	width: 25%;
+}
+
+.m-hms_medicineCompany #frmEdit .creModdate .type-text label{
+    width: 20%;
+}
+
+.m-hms_medicineCompany  .linkPortalWrapper div.header,
+.m-hms_medicineCompany  .linkPortalWrapper .linkPortalDataWrapper th{
+    background-color: #F8F8F8;
+}

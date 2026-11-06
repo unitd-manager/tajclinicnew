@@ -1,0 +1,80 @@
+
+/*** WIDGETS ***/
+@media all
+{
+
+    .m-tradingsg_dashboard .widget {
+        background: none repeat scroll 0 0 #F5F7FA;
+        border: medium none;
+        padding-right: 15px !important;
+        padding-left: 0px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .m-tradingsg_dashboard .widget {
+        margin-bottom:15px;
+        padding-right:0;
+        margin-right:20px;
+    }
+
+    .m-tradingsg_dashboard .widget h2 {
+        padding:5px;
+        margin:0;
+        font-size: 25px;
+    }
+
+    .m-tradingsg_dashboard .widget .heading {
+        margin: 0px !important;
+        font-size: 25px;
+        padding: 0px;
+    }
+
+    .m-tradingsg_dashboard .widget div.tableOuter {
+        height:300px;
+        overflow: auto;
+        border: 1px solid #CCC4C4;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+     }
+
+    .m-tradingsg_dashboard .widget table {
+        width:100%;
+        border-collapse: collapse;
+    }
+
+    .m-tradingsg_dashboard .widget table th,
+    .m-tradingsg_dashboard .widget table td{
+        padding:0.5em;
+        border: 1px solid #EFEFEF;
+    }
+
+    .m-tradingsg_dashboard .widget h2 .ui-icon {
+        float: right;
+    }
+
+    .m-tradingsg_dashboard #col1 .profilePic {
+        padding: 5px;
+        border:1px dotted #ccc;
+    }
+    
+    .m-tradingsg_dashboard #col1 .profilePic img {
+        display: block;
+        margin: auto;
+        max-width: 165px;
+    }
+
+    .m-tradingsg_dashboard .pbt10 {
+        padding-bottom: 10px !important;
+        padding-top: 10px !important;
+    }
+
+    .m-tradingsg_dashboard .addWidgetHeadings{
+        font-size: 25px !important;
+    }
+
+    .dashboardSummary .c33l{
+        width: 32.6% !important;
+        font-size: 40px !important;
+    }
+}

@@ -1,0 +1,107 @@
+
+CREATE TABLE IF NOT EXISTS `acc_category` (
+  `acc_category_id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) DEFAULT NULL,
+  `code` varchar(10) DEFAULT NULL,
+  `sort_order` tinyint(4) DEFAULT '0',
+  `parent_id` tinyint(4) DEFAULT '0',
+  `creation_date` datetime DEFAULT NULL,
+  `modification_date` datetime DEFAULT NULL,
+  `flag` tinyint(1) DEFAULT NULL,
+  `category_type` varchar(100) DEFAULT NULL,
+  `editable` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`acc_category_id`),
+  KEY `parent_id` (`parent_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `acc_head` (
+  `acc_head_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  `acc_category_id` tinyint(4) DEFAULT NULL,
+  `opening_balance_credit` decimal(19,4) DEFAULT NULL,
+  `opening_balance_debit` decimal(19,4) DEFAULT NULL,
+  `opening_balance_credit_base` decimal(19,4) DEFAULT NULL,
+  `opening_balance_debit_base` decimal(19,4) DEFAULT NULL,
+  `acc_company_id` int(11) DEFAULT NULL,
+  `creation_date` datetime DEFAULT NULL,
+  `modification_date` datetime DEFAULT NULL,
+  `flag` tinyint(1) DEFAULT NULL,
+  `code` varchar(10) DEFAULT NULL,
+  `counter_setup_id` int(11) DEFAULT NULL,
+  `stock` decimal(19,4) DEFAULT NULL,
+  `stock_rate` decimal(19,4) DEFAULT NULL,
+  `notes` text,
+  `contact_id` int(11) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `published` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`acc_head_id`),
+  KEY `acc_category_id` (`acc_category_id`),
+  KEY `acc_company_id` (`acc_company_id`),
+  KEY `counter_setup_id` (`counter_setup_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `journal` (
+  `journal_id` int(11) NOT NULL AUTO_INCREMENT,
+  `journal_master_id` int(11) NOT NULL,
+  `acc_head_id` int(11) DEFAULT NULL,
+  `currency_id` tinyint(4) DEFAULT NULL,
+  `exch_rate_to_base` decimal(19,10) DEFAULT NULL,
+  `debit` decimal(19,4) DEFAULT NULL,
+  `credit` decimal(19,4) DEFAULT NULL,
+  `acc_company_id` int(11) DEFAULT NULL,
+  `debit_base` decimal(19,4) DEFAULT NULL,
+  `credit_base` decimal(19,4) DEFAULT NULL,
+  `narration` varchar(1500) DEFAULT NULL,
+  `creation_date` datetime DEFAULT NULL,
+  `modification_date` datetime DEFAULT NULL,
+  `flag` tinyint(1) DEFAULT NULL,
+  `pending` tinyint(4) DEFAULT NULL,
+  `margin` decimal(19,4) DEFAULT NULL,
+  `avg_buy_rate` decimal(19,4) DEFAULT NULL,
+  `currency_type` varchar(15) DEFAULT NULL,
+  `avg_stock_rate` decimal(19,4) DEFAULT NULL,
+  `journal_id_rel` int(11) DEFAULT NULL,
+  `acc_head_id_other` int(11) DEFAULT NULL,
+  `by_import` int(1) DEFAULT NULL,
+  PRIMARY KEY (`journal_id`),
+  KEY `journal_master_id` (`journal_master_id`),
+  KEY `acc_head_id` (`acc_head_id`),
+  KEY `currency_id` (`currency_id`),
+  KEY `acc_company_id` (`acc_company_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `journal_master` (
+  `journal_master_id` int(11) NOT NULL AUTO_INCREMENT,
+  `entry_date` date DEFAULT NULL,
+  `acc_company_id` int(11) DEFAULT NULL,
+  `voucher_type` varchar(150) DEFAULT NULL,
+  `narration` varchar(2500) DEFAULT NULL,
+  `staff_id` int(11) DEFAULT NULL,
+  `ledger_authorized` int(11) DEFAULT NULL,
+  `creation_date` datetime DEFAULT NULL,
+  `modification_date` datetime DEFAULT NULL,
+  `flag` tinyint(1) DEFAULT NULL,
+  `action` varchar(10) DEFAULT NULL,
+  `counter_setup_id` int(11) DEFAULT NULL,
+  `is_counter` tinyint(4) NOT NULL DEFAULT '0',
+  `acc_head_id` int(11) DEFAULT NULL,
+  `amount` decimal(19,4) DEFAULT NULL,
+  `exch_rate_cust_curr` decimal(19,10) DEFAULT NULL,
+  `amount_sum_cust_curr` decimal(19,4) DEFAULT NULL,
+  `exch_rate_cust_curr_lc_to_fc` decimal(19,4) DEFAULT NULL,
+  `by_import` int(1) DEFAULT NULL,
+  PRIMARY KEY (`journal_master_id`),
+  KEY `acc_company_id` (`acc_company_id`),
+  KEY `staff_id` (`staff_id`),
+  KEY `counter_setup_id` (`counter_setup_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `counter_setup` (
+  `counter_setup_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  `creation_date` datetime DEFAULT NULL,
+  `modification_date` datetime DEFAULT NULL,
+  `flag` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`counter_setup_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@media all
+{
+    .m-hms_prescription .toggle {
+        display:block;
+    }
+
+    .m-hms_prescription .yform{
+        background-color: #fff;
+        border: 0;
+        padding: 0;
+    }
+
+    .m-hms_prescription .c50l,
+    .m-hms_prescription .c50r {
+        width: 100%;
+    }
+
+    .m-hms_prescription .ym-columnar .ym-fbox-text label,
+    .m-hms_prescription .ym-columnar .ym-fbox-select label,
+    .m-hms_prescription #frmEdit .type-text label,
+    .m-hms_prescription #frmEdit .type-select label {
+        width: 100%;
+    }
+
+    .m-hms_prescription #frmEdit .creModdate .type-text label{
+        width: 20%;
+    }
+
+    .m-hms_prescription  .linkPortalWrapper div.header,
+    .m-hms_prescription  .linkPortalWrapper .linkPortalDataWrapper th{
+        background-color: #F8F8F8;
+    }
+
+}

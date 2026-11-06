@@ -1,0 +1,407 @@
+@charset "UTF-8";
+
+.addProduct {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 8px !important;
+    margin: 0;
+    float: left;
+    font-size: 18px;
+    width: 100%;
+}
+
+.checkProductPrice {
+	background: -moz-linear-gradient(center top , white, #E6E6E6) repeat scroll 0 0 transparent;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+}
+
+.addProduct input.text {
+    padding: 3px 0px 8px 8px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.addProductByVisitCode {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 8px !important;
+    margin: 0;
+    float: left;
+    font-size: 18px;
+    width: 100%;
+}
+
+.addProductByVisitCode input.text {
+    padding: 3px 0px 8px 8px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.allButtonsShow {
+    display:block;
+}
+
+.allButtonsHide {
+    display:none;
+}
+
+a.deleteItem {
+    text-decoration:underline;
+}
+
+.balanceRow {
+	display: none;
+}
+
+.thermalPrintHide {
+    display: none;
+}
+
+.buttonpos{
+    background: -moz-linear-gradient(center top , white, #0F9191) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #0F9191;
+    border-radius: 0.5em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    outline: medium none;
+    padding: 0.5em 2em 0.55em;
+
+    text-align: center    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.buttonpos2{
+    background: -moz-linear-gradient(center top , white, #0F9191) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #0F9191;
+    border-radius: 0.5em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    outline: medium none;
+    padding: 0.5em 2em 0.55em 2.5em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.netTotal{
+    font-size: 18pt;
+    text-align: right;
+    font-weight: bold;
+}
+
+.totalDiscount{
+    font-size: 13pt;
+    text-align: right;
+    font-weight: bold;
+}
+
+.totalQty{
+    font-size: 13pt;
+    text-align: right;
+    font-weight: bold;
+}
+
+.focus{
+    border: 2px solid #0F9191;
+    background-color: #E7F4F4;
+}
+
+.checkprod{
+    display: inline;
+    float: left;
+    margin-bottom: 0.15em;
+    margin-right: 1em;
+    padding-left: 118px;
+}
+
+.locationNameHeading {
+    font-size:40px;
+    width:100%;
+    padding: 5px 11px;
+    margin:auto;
+}
+
+.totalFontSize{
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: right;
+}
+
+.txt_16px,
+.txt_16px td,
+.txt_16px th{
+    font-size: 16px !important;
+}
+
+.txt_18px,
+.txt_18px td,
+.txt_18px th{
+    font-size: 18px !important;
+}
+
+.txt_20px,
+.txt_20px td,
+.txt_20px th{
+    font-size: 20px !important;
+}
+
+td.netTotalForProd {
+    font-size: 18px;
+}
+
+.OrderNoOnTop{
+    font-size: 14pt;
+    font-weight: bold;
+    color: #000000 !important;
+    margin-right: 0px !important;
+}
+
+.panel-body {
+    padding: 2px !important;
+}
+
+.panel-heading {
+    padding: 0px 15px !important;
+}
+
+.modeOfPaymentDropdown {
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 6px;
+    margin-left: 1%;
+    margin-right: 0px !important;
+}
+
+.modeOfPaymentDropdown select {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+input::-webkit-input-placeholder {
+    color: #000000 !important;
+    font-weight: bold !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+    color: #000000 !important;
+    font-weight: bold !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: #000000 !important;
+    font-weight: bold !important;  
+}
+ 
+input:-ms-input-placeholder {  
+    color: #000000 !important; 
+    font-weight: bold !important; 
+}
+
+.ui-menu .ui-menu-item a{
+    font-size: 18px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ui-menu .ui-menu-item a.ui-corner-all:hover,
+.ui-menu .ui-menu-item a.ui-corner-all:focus,
+.ui-menu .ui-menu-item a.ui-corner-all:active {
+    font-weight: bold !important;
+    background-color: #0062cc !important;
+    background: #0062cc !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0px !important;
+
+}
+
+.ui-menu .ui-menu-item .ui-state-hover,
+.ui-menu .ui-menu-item .ui-widget-content .ui-state-hover,
+.ui-menu .ui-menu-item .ui-widget-header .ui-state-hover,
+.ui-menu .ui-menu-item .ui-state-focus,
+.ui-menu .ui-menu-item .ui-widget-content .ui-state-focus,
+.ui-menu .ui-menu-item .ui-widget-header .ui-state-focus {
+    font-weight: bold !important;
+    background-color: #0062cc !important;
+    background: #0062cc !important;
+    color: #FFFFFF !important;
+    border-color: none !important;
+    border-radius: 0px !important;
+}
+
+.addClientIcon::before{
+    content: '\f007';
+    font-family: FontAwesome;
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.applyDiscountIcon::before{
+    content: '\f010';
+    font-family: FontAwesome;
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.printBillIcon::before{
+    content: '\f02f';
+    font-family: FontAwesome;
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.removeClientIcon::before{
+    content: '\f05c';
+    font-family: FontAwesome;
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.TotalAmountDisplayTop {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: -23px;
+    margin-bottom: -22px;
+    margin-right: 5px;
+}
+
+.printdivforprinter{
+    visibility: hidden;
+}
+
+#portalPOSApplyDiscountForm label,
+#portalPOSApplyDiscountForm input{
+    width: 100% !important;
+}
+
+#portalPOSApplyDiscountForm strong.message{
+    margin-left: 0 !important;
+    color: #fff;
+    background-color: #800;
+    padding: 2px 9px;
+    border-radius: 2px;
+}
+
+.gstToggleText {
+    font-size: 21px;
+    font-weight: bold;
+    margin: 2px 10px;
+    color: #000000;
+}
+
+.gstOnOff {
+    margin-right: 15px;
+}
+
+.displayNone{
+    display: none;
+}
+
+.applyShippingChargeIcon::before{
+    content: '\f0d1';
+    font-family: FontAwesome;
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+#portalPOSApplyShippingChargesForm strong.message{
+    margin-left: 0 !important;
+    color: #fff;
+    background-color: #800;
+    padding: 2px 9px;
+    border-radius: 2px;
+}
+
+.orderDatePOSHeader {
+    margin-top: 1px;
+}
+
+.orderDatePOSHeader input {
+    width: 102px;
+    font-size: 18px;
+    padding: 2px 6px;
+    font-weight: bold !important;
+    float: left;
+}
+
+.orderDatePOSHeader .ui-datepicker-trigger {
+    width: 26px;
+    height: 22px;
+    margin-left: -3px;
+}
+
+.discountTypeHeader {
+    font-size: 16px !important;
+    text-decoration: underline !important;
+}
+
+.addProductTablePOS td {
+    border: 7px solid #49C3E9;
+}
+
+#checkPendingOrder {
+    padding: 5px 20px;
+    margin-top: 5px;
+}
+
+#changeStatusPending {
+    padding: 5px 27px !important;
+}
+
+.btn-group.btn-toggle {
+    z-index: 0 !important;
+}
+
+.batchProductAdd {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.printPosBtn {
+    margin-right: 13%;
+    margin-bottom: 10px !important;
+}
+
+.blinking {
+    animation:blinkingText 1.5s infinite;
+}
+
+@keyframes blinkingText {
+    0%   {color: #2a6496;}
+    25%  {color: #ff0000;}
+    50%  {color: #41c6ab;}
+    75%  {color: #ff0000;}
+    100% {color: #2a6496;}
+}
+
+.productNameInOrderItemWithLink u{
+    font-size: 16px !important;
+}
+
+.nameSaveInPOS input, .nameDrSaveInPOS select{
+    font-size: 18px;
+    padding: 3px;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+.nameSaveButtonInPOS input {
+    margin-top: 7px;
+    font-size: 17px;
+    padding: 4px 11px;
+}
+
+.orderDatePOSHeader input[name="hidden_date_display"] {
+    display: block !important;
+    right: 0px !important;
+    margin-left: -102px;
+}
+
+tbody#orderItems .txtRight.discountPercentage {
+    font-size: 15pt !important;
+}

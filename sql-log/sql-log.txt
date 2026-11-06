@@ -1,0 +1,281 @@
+/* Run the below code in the browser to enable new module */
+===========================================================
+http://santhyahms.localhost/admin/index.php?module=core_userGroup&_spAction=createAccessRecords
+http://santhyahms.cubosale.in/admin/index.php?module=core_userGroup&_spAction=createAccessRecords
+
+CREATE TABLE IF NOT EXISTS `internal_location` (
+  `internal_location_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `creation_date` date DEFAULT NULL,
+  `modification_date` date DEFAULT NULL,
+  `published` tinyint(1) DEFAULT NULL,
+  `flag` int(1) DEFAULT NULL,
+  `created_by` varchar(50) DEFAULT NULL,
+  `modified_by` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`internal_location_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+#========= ANSARI (17.12.2018) =========#
+ALTER TABLE `patient_visit` ADD `referred_to_doctor` VARCHAR(255) NULL DEFAULT NULL AFTER `referral_doctor_id`;
+ALTER TABLE `patient_visit` ADD `referred_by_doctor` VARCHAR(255) NULL DEFAULT NULL AFTER `referred_to_doctor`;
+ALTER TABLE `patient_visit` ADD `patient_visit_advice` TEXT NULL DEFAULT NULL AFTER `referred_by_doctor`; 
+
+#========= ANSARI (21.12.2018) =========#
+ALTER TABLE `product` ADD `generic_name` varchar(255) NULL DEFAULT NULL;
+
+#========= Mariyam (22.12.2018) =========#
+ALTER TABLE `patient_visit` ADD `allergy` TEXT NULL ;
+ALTER TABLE `medicines_in_patient` ADD `prescription` TINYINT( 4 ) NULL ;
+ALTER TABLE `patient_visit` ADD `height` VARCHAR( 50 ) NULL ,
+ADD `bmi` VARCHAR( 50 ) NULL ,
+ADD `SpO2` VARCHAR( 50 ) NULL ;
+ALTER TABLE `employee_in_patient` ADD `no_of_visits` INT( 11 ) NULL ;
+
+#========= ANSARI (24.12.2018) =========#
+ALTER TABLE `employee` ADD `visits_patients` TINYINT(4) NULL DEFAULT NULL;
+ALTER TABLE `in_patient` ADD `height` VARCHAR( 50 ) NULL ,
+ADD `bmi` VARCHAR( 50 ) NULL ,
+ADD `SpO2` VARCHAR( 50 ) NULL ;
+ALTER TABLE `supplier` ADD `dl_no` VARCHAR(100) NULL;
+
+#========= ANSARI (27.12.2018) =========#
+ALTER TABLE `media` CHANGE `description` `description` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
+
+ALTER TABLE `patient_visit` ADD `dne_report_notes` text DEFAULT NULL;
+
+#========= ANSARI (31.12.2018) =========#
+ALTER TABLE `medicines_visit` ADD `af_bf_food` VARCHAR(50) DEFAULT NULL;
+
+#========= ANSARI (07.01.2019) =========#
+ALTER TABLE `po_product` CHANGE `expiry_date` `expiry_date` VARCHAR(100) NULL DEFAULT NULL;
+ALTER TABLE `order_item` CHANGE `expiry_date` `expiry_date` VARCHAR(100) NULL DEFAULT NULL;
+ALTER TABLE `invoice_item` CHANGE `expiry_date` `expiry_date` VARCHAR(100) NULL DEFAULT NULL;
+
+#========= ANSARI (10.01.2019) =========#
+CREATE TABLE IF NOT EXISTS `dne_report` (
+  `dne_report_id` int(11) NOT NULL AUTO_INCREMENT,
+  `department_title` VARCHAR(255) DEFAULT NULL,
+  `report_heading` VARCHAR(255) DEFAULT NULL,
+  `ref_by` VARCHAR(255) DEFAULT NULL,
+  `study` VARCHAR(255) DEFAULT NULL,
+  `employee_id` INT(11) DEFAULT NULL,
+  `patient_visit_id` INT(11) DEFAULT NULL,
+  `posterior_tongue` VARCHAR(255) DEFAULT NULL,
+  `vallecullae` VARCHAR(255) DEFAULT NULL,
+  `epiglottis` VARCHAR(255) DEFAULT NULL,
+  `aryepiglottic_fold` VARCHAR(255) DEFAULT NULL,
+  `ventricular_bands` VARCHAR(255) DEFAULT NULL,
+  `pyriform_fossas` VARCHAR(255) DEFAULT NULL,
+  `oesophagus` VARCHAR(255) DEFAULT NULL,
+  `advised` VARCHAR(255) DEFAULT NULL,
+  `vocal_cords` VARCHAR(255) DEFAULT NULL,
+  `impression` VARCHAR(255) DEFAULT NULL,
+  `report_type` VARCHAR(50) DEFAULT NULL,
+  `creation_date` date DEFAULT NULL,
+  `modification_date` date DEFAULT NULL,
+  `created_by` varchar(50) DEFAULT NULL,
+  `modified_by` varchar(50) DEFAULT NULL,
+   PRIMARY KEY (`dne_report_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+#========= SYED (15.01.2019) =========#
+ALTER TABLE `order` ADD `order_time` time DEFAULT NULL ;
+
+#========= ANSARI (16.01.2019) =========#
+ALTER TABLE `order` ADD `staff_id` INT(11) DEFAULT NULL;
+
+#========= ANSARI (25.01.2019) =========#
+CREATE TABLE `adjust_stock_log` (
+  `adjust_stock_log_id` int(11) NOT NULL AUTO_INCREMENT,
+  `inventory_id` int(11) DEFAULT NULL,
+  `product_id` int(11) NOT NULL,
+  `adjust_stock` varchar(50) DEFAULT NULL,
+  `creation_date` datetime DEFAULT NULL,
+  `modification_date` datetime DEFAULT NULL,
+  `modified_by` varchar(100) DEFAULT NULL,
+  `created_by` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`adjust_stock_log_id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT =1;
+
+ALTER TABLE `adjust_stock_log` ADD `inventory_adjust_stock_id` int(11) DEFAULT NULL;
+ALTER TABLE `adjust_stock_log` ADD `batch_no` varchar(50) DEFAULT NULL;
+
+CREATE TABLE `inventory_adjust_stock` (
+  `inventory_adjust_stock_id` int(11) NOT NULL AUTO_INCREMENT,
+  `inventory_id` int(11) DEFAULT NULL,
+  `product_id` int(11) NOT NULL,
+  `batch_no` varchar(50) DEFAULT NULL,
+  `adjust_stock` varchar(50) DEFAULT NULL,
+  `creation_date` datetime DEFAULT NULL,
+  `modification_date` datetime DEFAULT NULL,
+  `modified_by` varchar(100) DEFAULT NULL,
+  `created_by` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`inventory_adjust_stock_id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT =1;
+
+ALTER TABLE `adjust_stock_log` ADD `po_product_id` int(11) DEFAULT NULL;
+ALTER TABLE `inventory_adjust_stock` ADD `po_product_id` int(11) DEFAULT NULL;
+
+CREATE TABLE `inventory_batchwise_stock` (
+  `inventory_batchwise_stock_id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_id` int(11) DEFAULT NULL,
+  `po_product_id` int(11) DEFAULT NULL,
+  `purchase_order_id` int(11) DEFAULT NULL,
+  `batch_no` varchar(50) DEFAULT NULL,
+  `purchased_qty` varchar(50) DEFAULT NULL,
+  `sales_return_qty` varchar(50) DEFAULT NULL,
+  `sales_qty` varchar(50) DEFAULT NULL,
+  `stock_transfer_in` varchar(50) DEFAULT NULL,
+  `stock_transfer_out` varchar(50) DEFAULT NULL,
+  `adjust_stock` varchar(50) DEFAULT NULL,
+  `current_stock` varchar(50) DEFAULT NULL,
+  `created_by` varchar(100) DEFAULT NULL,
+  `creation_date` datetime DEFAULT NULL,
+  `modified_by` varchar(100) DEFAULT NULL,
+  `modification_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`inventory_batchwise_stock_id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT =1;
+
+ALTER TABLE `inventory_batchwise_stock` ADD `site_id` int(11) DEFAULT NULL;
+ALTER TABLE `inventory_batchwise_stock` ADD `damaged_qty` varchar(50) DEFAULT NULL;
+ALTER TABLE `inventory_batchwise_stock` ADD `free_qty` varchar(50) DEFAULT NULL;
+ALTER TABLE `order_item` ADD `po_product_id` int(11) DEFAULT NULL;
+ALTER TABLE `adjust_stock_log` ADD `inventory_batchwise_stock_id` int(11) DEFAULT NULL;
+
+#========= MOIN (04.02.2019) =========#
+ALTER TABLE `dne_report` ADD `specialist` VARCHAR(100) NULL;
+ALTER TABLE `dne_report` ADD `eac_right` VARCHAR(100) NULL AFTER `specialist`, 
+ADD `eac_left` VARCHAR(100) NULL AFTER `eac_right`, 
+ADD `tympanic_membrane_right` VARCHAR(100) NULL AFTER `eac_left`, 
+ADD `tympanic_membrane_left` VARCHAR(100) NULL AFTER `tympanic_membrane_right`, 
+ADD `middle_ear_right` VARCHAR(100) NULL AFTER `tympanic_membrane_left`, 
+ADD `middle_ear_left` VARCHAR(100) NULL AFTER `middle_ear_right`;
+
+ALTER TABLE `dne_report` ADD `nasal_septum` VARCHAR(100) NULL, 
+ADD `nasal_cavity_right` VARCHAR(100) NULL, 
+ADD `nasal_cavity_left` VARCHAR(100) NULL, 
+ADD `inferior_turbinate_right` VARCHAR(100) NULL, 
+ADD `inferior_turbinate_left` VARCHAR(100) NULL, 
+ADD `middle_turbinate_right` VARCHAR(100) NULL, 
+ADD `middle_turbinate_left` VARCHAR(100) NULL, 
+ADD `paranasal_sinuses` VARCHAR(100) NULL, 
+ADD `omu_right` VARCHAR(100) NULL, 
+ADD `omu_left` VARCHAR(100) NULL, 
+ADD `choanae_right` VARCHAR(100) NULL, 
+ADD `choanae_left` VARCHAR(100) NULL; 
+
+#========= Mariyam (05.02.2019) =========#
+ALTER TABLE `employee_in_patient` ADD `type` VARCHAR( 50 ) NULL ;
+
+#========= ANSARI (06.02.2019) =========#
+ALTER TABLE `inventory_batchwise_stock` ADD `stock_transfer_internal_in` varchar(50) DEFAULT NULL;
+ALTER TABLE `inventory_batchwise_stock` ADD `stock_transfer_internal_out` varchar(50) DEFAULT NULL;
+ALTER TABLE `stock_transfer_history` ADD `to_location` varchar(50) DEFAULT NULL;
+
+ALTER TABLE `inventory` ADD `store` varchar(50) DEFAULT NULL,
+ADD `casuality` varchar(50) DEFAULT NULL,
+ADD `nursing_station` varchar(50) DEFAULT NULL,
+ADD `used_for_patient` varchar(50) DEFAULT NULL,
+ADD `ot` varchar(50) DEFAULT NULL,
+ADD `icu` varchar(50) DEFAULT NULL;
+
+ALTER TABLE `inventory_batchwise_stock` ADD `casuality` varchar(50) DEFAULT NULL,
+ADD `nursing_station` varchar(50) DEFAULT NULL,
+ADD `used_for_patient` varchar(50) DEFAULT NULL,
+ADD `ot` varchar(50) DEFAULT NULL,
+ADD `icu` varchar(50) DEFAULT NULL;
+
+ALTER TABLE `stock_transfer_history` ADD `from_location` varchar(50) DEFAULT NULL;
+
+#========= MOIN (07.02.2019) =========#
+ALTER TABLE `in_patient` ADD `advance_payment` DECIMAL(10,2) NULL,
+ADD `replacement_drug_charges` DECIMAL(10,2) NULL;
+
+#========= ANSARI (09.02.2019) =========#
+ALTER TABLE `order_item` CHANGE `discount_percentage` `discount_percentage` DECIMAL(10,2) NULL DEFAULT '0'; 
+ALTER TABLE `order_item` CHANGE `discount_amount` `discount_amount` DECIMAL(10,2) NULL DEFAULT '0'; 
+ALTER TABLE `invoice` CHANGE `invoice_amount` `invoice_amount` FLOAT(10,2) NULL DEFAULT '0'; 
+ALTER TABLE `invoice_item` CHANGE `discount` `discount` INT(11) NULL DEFAULT '0'; 
+ALTER TABLE `invoice_item` CHANGE `discount_percentage` `discount_percentage` DECIMAL(10,2) NULL DEFAULT '0'; 
+ALTER TABLE `invoice_item` CHANGE `discount_amount` `discount_amount` DECIMAL(10,2) NULL DEFAULT '0'; 
+
+UPDATE `order_item` SET `discount_percentage` = '0.00'
+WHERE `discount_percentage` IS NULL;
+
+UPDATE `order_item` SET `discount_amount` = '0.00'
+WHERE `discount_percentage` IS NULL;
+
+UPDATE `invoice` SET `invoice_amount` = '0.00'
+WHERE `invoice_amount` IS NULL;
+
+UPDATE `invoice_item` SET `discount` = '0.00'
+WHERE `discount` IS NULL;
+
+UPDATE `invoice_item` SET `discount_percentage` = '0.00'
+WHERE `discount_percentage` IS NULL;
+
+UPDATE `invoice_item` SET `discount_amount` = '0.00'
+WHERE `discount_amount` IS NULL;
+
+#========= MOIN (22.02.2019) =========#
+ALTER TABLE `in_patient` ADD `asst_surgeon_fees` DECIMAL(10,2) NOT NULL DEFAULT '0';
+
+ALTER TABLE `order` ADD `doctor_name` VARCHAR(100) NULL;
+
+#========= ANSARI (27.04.2019) =========#
+ALTER TABLE `patient_information` ADD `uhid` VARCHAR(30) DEFAULT NULL;
+
+#========= MOIN (7.05.2019) =========#
+ALTER TABLE `patient_visit` ADD `register_fees` INT(1) NULL;
+
+#========= Mariyam (17.06.2019) =========#
+ALTER TABLE `in_patient` ADD `treatment_given` TEXT NULL;
+ALTER TABLE `in_patient` CHANGE `advice_discharge` `advice_discharge` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL; 
+
+#========= Mariyam (26.06.2019) =========#
+INSERT INTO `valuelist` (`key_text`, `value`, `chi_value`, `creation_date`, `modification_date`, `sort_order`, `is_group_heading`, `code`, `flag`, `created_by`, `modified_by`) VALUES
+('employeeSpecialist', 'Ent Speciality', NULL, '2019-06-26', '2019-06-26', 225, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Anesthesiology', NULL, '2019-06-26', '2019-06-26', 226, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'General Surgeon', NULL, '2019-06-26', '2019-06-26', 227, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'General Physician', NULL, '2019-06-26', '2019-06-26', 228, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Pediatrician', NULL, '2019-06-26', '2019-06-26', 229, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Orthopaedician', NULL, '2019-06-26', '2019-06-26', 230, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Obstetrics & Gynaecology', NULL, '2019-06-26', '2019-06-26', 231, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Radiologist', NULL, '2019-06-26', '2019-06-26', 232, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Neurosurgery', NULL, '2019-06-26', '2019-06-26', 233, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Neurologist', NULL, '2019-06-26', '2019-06-26', 234, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Ophthalmologist', NULL, '2019-06-26', '2019-06-26', 235, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Cardiology', NULL, '2019-06-26', '2019-06-26', 236, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Gastroenterologist', NULL, '2019-06-26', '2019-06-26', 237, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Dental Surgeon', NULL, '2019-06-26', '2019-06-26', 238, NULL, '', NULL, 'Super Admin', 'Super Admin'),
+('employeeSpecialist', 'Urologist', NULL, '2019-06-26', '2019-06-26', 239, NULL, '', NULL, 'Super Admin', 'Super Admin');
+
+
+ALTER TABLE `employee` ADD `specialist` VARCHAR( 50 ) NULL ;
+
+ALTER TABLE `order` ADD `mobile_no` VARCHAR(100) NULL AFTER `doctor_name`, 
+ADD `category` VARCHAR(100) NULL;
+
+#========= Ansari (29.08.2019) =========#
+ALTER TABLE `order` ADD `discount_percentage` decimal(10,2) DEFAULT NULL;
+ALTER TABLE `invoice` ADD `discount_percentage` decimal(10,2) DEFAULT NULL;
+
+#========= MOIN (29.08.2019) =========#
+ALTER TABLE `patient_information` ADD `height` VARCHAR(50) NULL,
+ADD `weight` VARCHAR(50) NULL,
+ADD `bmi` VARCHAR(50) NULL;
+
+#========= Ansari (22.10.2019) =========#
+ALTER TABLE `expense` ADD `status` VARCHAR(50) DEFAULT NULL;
+
+ALTER TABLE `order` ADD `enable_gst` INT(1) NULL AFTER `discount_percentage`,
+ADD `gst_bill_no` VARCHAR(100) NULL AFTER `enable_gst`; 
+
+#========= Fathima (15.04.2022) =========#
+
+ALTER TABLE `in_patient` ADD `instruction_to_patient` TEXT NULL AFTER `treatment_given`; 
+ALTER TABLE `in_patient` ADD `system_examination` TEXT NULL AFTER `instruction_to_patient`; 
+
+
+#========= Fathima (13.06.2022) =========#
+ALTER TABLE `in_patient`  ADD `ent_fees` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `system_examination`,  ADD `dressing_fees` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `ent_fees`,  ADD `injection_fees` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `dressing_fees`,  ADD `foreign_body_removal` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `injection_fees`,  ADD `wax_removal` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `foreign_body_removal`,  ADD `iv_fluid` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `wax_removal`,  ADD `dr_fees` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `iv_fluid`,  ADD `x_ray` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `dr_fees`,  ADD `apr_condition_charges` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `x_ray`,  ADD `infusion_syringe` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `apr_condition_charges`,  ADD `rhyes_tube_insertion` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `infusion_syringe`,  ADD `stomach_wash` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `rhyes_tube_insertion`,  ADD `enema` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `stomach_wash`,  ADD `catherisation` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `enema`,  ADD `ward_medicine_replacement` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `catherisation`,  ADD `ot_medicine_replacement` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `ward_medicine_replacement`,  ADD `file_card` DECIMAL(10,2) NULL DEFAULT NULL  AFTER `ot_medicine_replacement`;

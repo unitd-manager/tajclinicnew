@@ -1,0 +1,36 @@
+.m-hms_pharmacyDailySales .toggle {
+    display:block;
+}
+
+.m-hms_pharmacyDailySales .yform {
+    background-color: #fff;
+    border: 0;
+    padding: 0;
+}
+
+.m-hms_pharmacyDailySales.v-edit .c50l,
+.m-hms_pharmacyDailySales.v-edit .c50r {
+    width: 100%;
+}
+
+.m-hms_pharmacyDailySales .ym-columnar .ym-fbox-text label,
+.m-hms_pharmacyDailySales .ym-columnar .ym-fbox-select label,
+.m-hms_pharmacyDailySales #frmEdit .type-text label,
+.m-hms_pharmacyDailySales #frmEdit .type-radio label,
+.m-hms_pharmacyDailySales #frmEdit .type-select label {
+    width: 100%;
+}
+
+.ym-columnar.ym-form .form-row-wrapper.row_published .leftCol, 
+.columnar.yform .form-row-wrapper.row_published .leftCol{
+	width: 25%;
+}
+
+.m-hms_pharmacyDailySales #frmEdit .creModdate .type-text label{
+    width: 20%;
+}
+
+.m-hms_pharmacyDailySales  .linkPortalWrapper div.header,
+.m-hms_pharmacyDailySales  .linkPortalWrapper .linkPortalDataWrapper th{
+    background-color: #F8F8F8;
+}

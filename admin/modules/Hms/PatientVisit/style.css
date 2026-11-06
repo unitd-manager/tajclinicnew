@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+@media all
+{
+
+    .cpSearch .dateRange {
+        width: 400px !important;
+    }
+
+    .yform.columnar.qucikaddPatientForm label {
+        width: 100%;
+    }
+
+    #frmEdit {
+        margin-top: -50px !important;
+        position: static !important;
+    }
+
+    .editTopButtonActionDiv {
+        top: 2px !important;
+        width: 75%;
+        position: relative !important;
+        padding-bottom: 12px !important;
+    }
+
+    #portalFormPatientVisitCreate .type-radio.form-row-wrapper.yesNo.row_dr_required .leftCol{
+        width: 20% !important;
+    }
+
+    .searchPanelInPatientVisitLabel label,
+    .searchPanelInPatientVisitLabel input,
+    .searchPanelInPatientVisitLabel select,
+    .searchPanelInPatientVisitLabel select option{
+        font-size: 16px !important;
+    }
+
+    .searchPanelInPatientVisitLabel label.headerLabel{
+        margin-bottom: 0 !important;
+        font-size: 18px !important;
+    }
+
+    .consultationFeesTextBoxForEdit label
+    ,.consultationFeesTextBoxForEdit input {
+        font-size: 20px !important;
+    }
+
+    .ui-menu .ui-menu-item a{
+        font-size: 16px !important;
+    }
+
+    .companyDetailsHide{
+    	display: none;
+    }
+
+    .searchTableInPatientVisit, 
+    .searchTableInPatientVisitAppointment{
+        padding-top: 0 !important;
+    }
+
+    .createPatientButtonPatientVisit .createPatientVisitSearchButton {
+        padding: 7px 9px;
+        font-size: 16px !important;
+        margin-top: 22px !important;
+    }
+
+    .error strong.message {
+	    background-color: darkred;
+	    border-radius: 2px;
+	    color: #ffffff !important;
+	    padding: 2px 10px;
+        margin: 0 !important;
+	}
+
+    .treatmentCategoryFilter > select {
+        margin: 10px 0;
+        padding: 8px;
+        width: 99%;
+    }
+
+    .m-hms_patientVisit .highlightCell {
+        background-color: #551A8B;
+        color: #fff;
+    }
+
+    .m-hms_patientVisit .highlight {
+        background-color: #B4BAC4;
+    }
+
+    .m-hms_patientVisit img.icon {
+        width: 25px;
+    }
+
+    .m-hms_patientVisit .ui-widget #labDisplay input#fld_fees {
+        width: 175px;
+    }
+
+    .clearSearchValuesButton{
+        padding: 7px 9px;
+        font-size: 16px !important;
+        margin-top: 22px !important;
+    }
+
+    #portalFormDiseaseList table.thinlist th, 
+    #portalFormDiseaseList table.thinlist td{
+        padding: 5px 10px !important;
+        font-size: 16px !important;
+    }
+
+    .billSummaryOrder.float_left {
+        margin-right: 3px;
+    }
+
+    .totalFeesInList {
+        text-align: right;
+        font-weight: bold;
+        padding: 2px;
+        color: #ffffff;
+        font-size: 16px !important;
+    }
+
+    .columnar div.type-text.row_notes textarea{
+        height: 55px !important;
+        width: 90%;
+    }
+
+    #tabs .columnar div.type-check.labTestBox input#fld_fees {
+        width: 70%;
+    }
+
+    #portalForm_medicalTestDisplay .c20l{
+        width: 14%;
+        float: left;
+    }
+
+    .m-hms_patientVisit .bgColorHighlight {
+        background-color: #49C3E9;
+    }
+
+    .feesBox{
+        width: 70% !important;
+        margin-top: 40px;
+    }
+
+    .feesUpdateForVisitRecord {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .medParaList label{
+        width: 30%;
+    }
+
+    #portalForm_vaccinationDisplay .type-text.ym-fbox-text label,
+    #portalForm_vaccinationDisplay .type-radio .leftCol label {
+        display: none;
+    }
+
+    .fees_amount #fld_fees_amount,.fees_amount label {
+        float: left;
+    }
+
+    .fees_amount #fld_fees_amount{
+        padding-left: 5px;
+    }
+
+    #sortableInvesticationCategories li {
+        list-style: none;
+        background-color: #FFFFFF !important;
+        border: none !important;
+        float: left;
+        text-decoration: underline;
+        color: #000000;
+    }
+
+    #sortableInvesticationCategories {
+        margin-left: 0px !important;
+    }
+
+    .noPadding {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .InvestigationsPanelWithInvestigations .panel-body {
+        min-height: 203px;
+    }
+
+    #sortableInvesticationCategories li.ui-state-default a {
+        color: #000000 !important;
+    }
+
+    .blinkingBackground {
+        animation:blinkingBackground 2s infinite;
+        border-radius: 2px;
+        color: #ffffff !important;
+        padding: 2px 10px;
+        margin: 0 !important;
+    }
+    
+    @keyframes blinkingBackground{
+        0% {background: #ed5d25;}
+        25% {background: #8a197f;}
+        50% {background: #009399;}
+        75% {background: #8a197f;}
+        100% {background: #ed5d25;}
+    }
+
+    .blinking {
+        animation:blinkingText 1.5s infinite;
+    }
+
+    @keyframes blinkingText {
+        0%   {color: #2a6496;}
+        25%  {color: #ff0000;}
+        50%  {color: #41c6ab;}
+        75%  {color: #ff0000;}
+        100% {color: #2a6496;}
+    }
+
+    .townBox {
+        width: 50%;
+        float:left;
+    }
+
+    .townupdate {
+        text-decoration: underline;
+        padding-left: 25px;
+        padding-top: 15px;
+    }
+
+    .m-hms_patientVisit .type-radio.form-row-wrapper.yesNo.row_visited_by_referral_doctor .leftCol {
+        width: 100% !important;
+    }
+
+    .m-hms_patientVisit .type-radio.form-row-wrapper.yesNo.row_register_fees .leftCol {
+        width: 100% !important;
+    }
+
+    .m-hms_patientVisit .patientVisitSummaryPortal {
+        max-height: none !important;
+        overflow: auto;
+    }  
+
+    #media__hms_patientVisit__picture, 
+    #media__hms_patientVisit__dneEarpicture, 
+    #media__hms_patientVisit__dneNosepicture {
+        width: 32.3%;
+        float: left;
+        margin-right: 1%;
+    }  
+
+    .BPOthersBox {
+        float: left;
+        width: 33%;
+    }
+
+    .patientDetailsBoxUhid {
+        width: 23%;
+        float: left;
+    }
+
+    .patientDetailsBoxName {
+        width: 74%;
+        float: left;
+        margin-left: 12px;
+    }
+
+    .linkPortalWrapper table td .patientDetailsBoxName input[type="text"] {
+        width: 99%;
+    }
+
+    .m-hms_patientVisit.v-edit .ym-columnar div.ym-fbox-select select,
+    .m-hms_patientVisit.v-edit .columnar div.type-select select {
+        width: 100%;
+    }
+}

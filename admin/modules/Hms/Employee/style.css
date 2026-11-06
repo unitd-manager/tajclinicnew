@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+@media all
+{
+	.ym-columnar.ym-form .form-row-wrapper .leftCol
+	, .columnar.yform .form-row-wrapper .leftCol {
+	    float: left;
+	    width: 100%;
+	}
+
+	td.highlightedTdForNote{
+		border: 3px solid #23b7e5 !important;
+	}
+
+	.timeindisplayHide,
+	.timeoutdisplayHide{
+		display: none;
+	}
+
+	#AddEmployeePerformanceForm .rating-hover-tips {
+	    margin: 6px;
+	    padding-left: 2px !important;
+	}
+
+	#AddEmployeePerformanceForm .star-rating,
+	#AddEmployeePerformanceForm .rating-cancel {
+	    margin-top: 8px !important;
+	    margin-right: 3px !important;
+	}
+
+	.hms_employee_employeePerformanceLink .star-rating,
+	.hms_employee_employeePerformanceLink .rating-cancel {
+	    margin-top: 2px !important;
+	    margin-right: 3px !important;
+	}
+
+	#AddEmployeePerformanceForm .error strong.message {
+	    background-color: darkred;
+	    border-radius: 2px;
+	    color: #ffffff !important;
+	    padding: 2px 10px;
+        margin: 0 !important;
+	}
+
+	.star-rating-readonly {
+	    display: none;
+	}
+
+	.error strong.message {
+	    background-color: darkred;
+	    border-radius: 2px;
+	    color: #ffffff !important;
+	    padding: 2px 10px;
+        margin-left: 0 !important;
+	}
+
+	.error select,
+	.error input {
+	    border: 2px solid darkred !important;
+	}
+
+	.error label{
+		color: darkred !important;
+	}
+
+	#fld_error_box1 {
+	    height: 0 !important;
+	    margin-top: -2px !important;
+	}
+
+	.row_error_box1{
+		display: none;
+	}
+
+	.row_error_box1.error{
+		display: block !important;
+	}
+}

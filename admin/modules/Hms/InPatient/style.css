@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+@media all
+{
+    .m-hms_inPatient .toggle {
+        display:block;
+    }
+
+    .m-hms_inPatient .yform{
+        background-color: #fff;
+        border: 0;
+        padding: 0;
+    }
+
+    .m-hms_inPatient .c50l,
+    .m-hms_inPatient .c50r {
+        width: 100%;
+    }
+
+    .m-hms_inPatient .ym-columnar .ym-fbox-text label,
+    .m-hms_inPatient .ym-columnar .ym-fbox-select label,
+    .m-hms_inPatient #frmEdit .type-text label,
+    .m-hms_inPatient #frmEdit .type-select label {
+        width: 100%;
+    }
+
+    .m-hms_inPatient #frmEdit .creModdate .type-text label{
+        width: 20%;
+    }
+
+    .m-hms_inPatient  .linkPortalWrapper div.header,
+    .m-hms_inPatient  .linkPortalWrapper .linkPortalDataWrapper th{
+        background-color: #F8F8F8;
+    }
+
+    .medParaList label{
+        width: 30%;
+    }
+
+    .m-hms_inPatient .bgColorHighlight {
+        background-color: #49C3E9;
+    }
+
+    .m-hms_inPatient img.icon {
+        width: 25px;
+    }
+
+    .m-hms_inPatient .createdModifiedEditTop {
+        margin-right: 2px !important;
+        margin-top: 1px !important;
+    }
+
+    .m-hms_inPatient .admissionTotalAmount {
+        width: 2;
+        float: left;
+        margin-left: -12px;
+        font-size: 16px;
+    }
+
+    #sortableInvesticationCategories li {
+        list-style: none;
+        background-color: #FFFFFF !important;
+        border: none !important;
+        float: left;
+        text-decoration: underline;
+        color: #000000;
+    }
+
+    #sortableInvesticationCategories {
+        margin-left: 0px !important;
+    }
+
+    #sortableInvesticationCategories li.ui-state-default a {
+        color: #000000 !important;
+    }
+
+    .yform.edit .type-text div.txt,
+    .yform.edit .type-text div.txt,
+    .yform.edit .type-select div.txt,
+    .yform.edit .form-row-wrapper div.txt {
+        margin-left: 0% !important;
+    }
+}

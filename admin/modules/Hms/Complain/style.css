@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@media all
+{
+    .m-hms_complain .toggle {
+        display:block;
+    }
+
+    .m-hms_complain .yform{
+        background-color: #fff;
+        border: 0;
+        padding: 0;
+    }
+
+    .m-hms_complain .c50l,
+    .m-hms_complain .c50r {
+        width: 100%;
+    }
+
+    .m-hms_complain .ym-columnar .ym-fbox-text label,
+    .m-hms_complain .ym-columnar .ym-fbox-select label,
+    .m-hms_complain #frmEdit .type-text label,
+    .m-hms_complain #frmEdit .type-select label {
+        width: 100%;
+    }
+
+    .m-hms_complain #frmEdit .creModdate .type-text label{
+        width: 20%;
+    }
+
+    .m-hms_complain  .linkPortalWrapper div.header,
+    .m-hms_complain  .linkPortalWrapper .linkPortalDataWrapper th{
+        background-color: #F8F8F8;
+    }
+
+}

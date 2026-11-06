@@ -1,0 +1,32 @@
+<?
+class CPL_Admin_Modules_Payroll_PayrollManagement_Controller extends CP_Common_Lib_ModuleControllerAbstract
+{
+
+	function getUpdateRecords() {
+        return $this->model->getUpdateRecords();
+    }
+
+	function getUpdateRecordsValidate() {
+        return $this->model->getUpdateRecordsValidate();
+    }
+
+	function getUpdateOverTimeAmount() {
+        return $this->model->getUpdateOverTimeAmount();
+    }
+
+	function getpayslipprintPdf() {
+        return $this->model->getpayslipprintPdf();
+    }
+
+    function getPrintPayslipForm() {
+        return $this->view->getPrintPayslipForm();
+    }
+
+    function getPrintPayslipFormSubmit() {
+        return $this->model->getPrintPayslipFormSubmit();
+    }
+
+    function getPrintPaySlipForAllPdf() {
+        return $this->view->getPrintPaySlipForAllPdf();
+    }
+}

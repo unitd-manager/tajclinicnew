@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@media all
+{
+    .m-hms_expenseHead .toggle {
+        display:block;
+    }
+
+    .m-hms_expenseHead .yform{
+        background-color: #fff;
+        border: 0;
+        padding: 0;
+    }
+
+    .m-hms_expenseHead .c50l,
+    .m-hms_expenseHead .c50r {
+        width: 100%;
+    }
+
+    .m-hms_expenseHead .ym-columnar .ym-fbox-text label,
+    .m-hms_expenseHead .ym-columnar .ym-fbox-select label,
+    .m-hms_expenseHead #frmEdit .type-text label,
+    .m-hms_expenseHead #frmEdit .type-select label {
+        width: 100%;
+    }
+
+    .m-hms_expenseHead #frmEdit .creModdate .type-text label{
+        width: 20%;
+    }
+
+    .m-hms_expenseHead  .linkPortalWrapper div.header,
+    .m-hms_expenseHead  .linkPortalWrapper .linkPortalDataWrapper th{
+        background-color: #F8F8F8;
+    }
+
+}

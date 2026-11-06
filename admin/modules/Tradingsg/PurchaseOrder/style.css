@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+.ui-tabs .ui-tabs-panel {
+    display: block;
+    border-width: 0;
+    padding: 9px 2px !important;
+    background: none;
+}
+
+.m-tradingsg_purchaseOrder .yform.edit .type-text div.txt
+,.m-tradingsg_purchaseOrder .yform.edit .type-text div.txt
+,.m-tradingsg_purchaseOrder .yform.edit .type-select div.txt
+,.m-tradingsg_purchaseOrder .yform.edit .form-row-wrapper div.txt {
+    margin-left: 0;
+    padding: 0 0.5em 0.5em 0;
+}
+
+.m-tradingsg_purchaseOrder .toggle {
+    display:block;
+}
+
+.m-tradingsg_purchaseOrder .yform {
+    background-color: #fff;
+    border: 0;
+    padding: 0;
+}
+
+.m-tradingsg_purchaseOrder.v-new .c50l,
+.m-tradingsg_purchaseOrder.v-new .c50r{
+    width: 50%;
+}
+
+.m-tradingsg_purchaseOrder .c50l,
+.m-tradingsg_purchaseOrder .c50r {
+    width: 100%;
+}
+
+.m-tradingsg_purchaseOrder .ym-columnar .ym-fbox-text label,
+.m-tradingsg_purchaseOrder .ym-columnar .ym-fbox-select label,
+.m-tradingsg_purchaseOrder #frmEdit .type-text label,
+.m-tradingsg_purchaseOrder #frmEdit .type-select label {
+    width: 100%;
+}
+
+.clearPoProductItem,
+.creationModificationPo,
+.viewSubPoProducts {
+	cursor: pointer;
+}
+
+#addNewproductForm .type-select.ym-fbox-select.row_unit\[\] label,
+#addNewproductForm .type-select.ym-fbox-select.row_category\[\] label,
+#addNewproductForm .type-select.ym-fbox-select.row_medicine_company\[\] label{
+    display: none !important;
+}
+
+#addNewproductForm .type-text.ym-fbox-text {
+    width: 128px !important;
+}
+
+#addNewproductForm #fld_unit\[\],
+#addNewproductForm #fld_medicine_company\[\] {
+    width: 100px !important;
+}
+
+#addNewproductForm .row_error_box1 strong.message {
+    width: 460px !important;
+}
+
+.btn-primary a,
+.btn-warning a{
+	color: #FFF !important;
+}
+
+.m-tradingsg_purchaseOrder .row_error_box1 label,
+.m-tradingsg_purchaseOrder #fld_error_box1 {
+    display: none;
+}
+
+.m-tradingsg_purchaseOrder .row_error_box1 {
+    padding-bottom: 5px !important;
+}
+
+.m-tradingsg_purchaseOrder .row_error_box1 strong.message {
+    background-color: #8B0000;
+    border-radius: 3px;
+    color: #FFFFFF !important;
+    padding: 5px 13px;
+    width: 50%;
+    display: block;
+}
+
+.m-tradingsg_purchaseOrder .text.last_price {
+    background-color: #FFFFFF;
+    border: medium none;
+    color: #000000;
+    font-weight: bold;
+    text-align: right;
+    width: 120px;
+}
+
+.m-tradingsg_purchaseOrder .noRenewal {
+    height: 60px;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.m-tradingsg_purchaseOrder #addMultipleLineItemForm .lineItemDescription,
+.m-tradingsg_purchaseOrder #addMultipleLineItemForm .poQuantity {
+    padding: 6px;
+    width: 100px;
+}
+
+.m-tradingsg_purchaseOrder #addMultipleLineItemForm .poProductTitle{
+    width: 250px;
+}
+
+.m-tradingsg_purchaseOrder .grandTotalPurchasePo {
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.m-tradingsg_purchaseOrder .purchaseOrderPoProduct {
+    max-height: 600px;
+    overflow: auto;
+}
+
+.qtySize input {
+    width: 45px !important;
+}
+
+#po_productTable .ui-autocomplete-input {
+    margin: 0;
+    padding: 0.1em 0 0.1em 0.45em;
+}
+
+.productSize input {
+    width: 160px !important;
+}
+
+#addNewproductForm #fld_unit\[\], #addNewproductForm #fld_medicine_company\[\] {
+    width: 100px !important;
+}
+
+.priceSize input {
+    width: 70px !important;
+}
+
+#addNewproductForm .packSize {
+    width: 60px;
+}
+
+#addNewproductForm .batchNo {
+    width: 80px;
+}
+
+#addNewproductForm .hsn {
+    width: 70px;
+}
+
+#addNewproductForm .poGst {
+    width: 45px;
+}
+
+.m-tradingsg_purchaseOrder .grandTotalPurchasePoDiscount {
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.m-tradingsg_purchaseOrder .grandTotalPurchasePoDiscount input {
+    width: 90px;
+    font-size: 18px;
+    margin-left: 5px;
+    font-weight: bold;
+    text-align: right;
+    padding: 0px 6px;
+}
+
+.m-tradingsg_purchaseOrder .disountTotalValuePurchaseOrderRightPanel {
+    font-size: 15px;
+    padding: 7px 5px;
+}
+
+.applyCustomerDiscount {
+    margin-top: 1px;
+    margin-left: 0px !important;
+    padding: 6px 10px;
+}
+
+.columnar div.error .message {
+    margin-left: 0 !important;
+}
+
+    .error strong.message {
+        animation:blinkingBackground 1.5s infinite;
+        border-radius: 2px;
+        color: #ffffff !important;
+        padding: 2px 10px;
+        margin: 0 !important;
+    }
+    
+    @keyframes blinkingBackground{
+        0% {background: #0074cc;}
+        25% {background: #ff0000;}
+        50% {background: #41c6ab;}
+        75% {background: #ff0000;}
+        100% {background: #0074cc;}
+    }

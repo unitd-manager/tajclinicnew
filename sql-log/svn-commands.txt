@@ -1,0 +1,11 @@
+USE THIS COMMAND TO TRANSFER LOCAL FILES FROM TO DEV/TEST :
+==========================================================
+/utils/export-from-git.sh --repo santhyahms --dest /home/santhyahms/public_html/
+
+
+USE THIS COMMAND TO TRANSFE RMASTER FILES FROM TO DEV/TEST :
+===========================================================
+/utils/export-from-git.sh --repo cmsPilot --folder v3.0/CP/admin/modules/Hms/ --dest /home/cmsPilot/
+
+/utils/export-from-git.sh --repo cmsPilot --folder v3.0/CP/admin/themes/Angle/ --dest /home/cmsPilot/
+

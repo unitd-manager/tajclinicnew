@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@media all
+{
+    .m-hms_product .toggle {
+        display:block;
+    }
+
+    .m-hms_product .yform{
+        background-color: #fff;
+        border: 0;
+        padding: 0;
+    }
+
+    .m-hms_product .c50l,
+    .m-hms_product .c50r {
+        width: 100%;
+    }
+
+    .m-hms_product .ym-columnar .ym-fbox-text label,
+    .m-hms_product .ym-columnar .ym-fbox-select label,
+    .m-hms_product #frmEdit .type-text label,
+    .m-hms_product #frmEdit .type-select label,
+    .m-hms_product #frmEdit .type-radio .leftCol{
+        width: 100%;
+    }
+
+    .m-hms_product #frmEdit .creModdate .type-text label{
+        width: 20%;
+    }
+
+    .m-hms_product  .linkPortalWrapper div.header,
+    .m-hms_product  .linkPortalWrapper .linkPortalDataWrapper th{
+        background-color: #F8F8F8;
+    }
+
+    .from_age_box .type-text label {
+        width: 32%
+    }
+
+
+}
